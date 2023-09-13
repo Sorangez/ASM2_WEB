@@ -68,6 +68,12 @@ form .field{
 .field button{
     background-color: var(--component-color);
     color: white;
+    transition: 0.2s ease-out;
+}
+
+.field button:active{
+    transform: scale(0.96);
+    background-color: #e7193f;
 }
 
 .form-container{
@@ -93,6 +99,7 @@ form .field{
 
 .form a:hover{
     text-decoration: none;
+    color: blue;
 }
 
 @media (max-width: 992px) {
