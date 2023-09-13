@@ -77,14 +77,22 @@
                     <header>Login</header>
                     <form action="#">
                         <div class="field input-field">
-                            <input type="email" placeholder="Email" class="input">
+                            <input type="email" placeholder="Email" class="email">
                         </div>
                         <div class="field input-field">
                             <input type="password" placeholder="Password" class="password">
                             <i class='bx bx-hide hide-icon'></i>
                         </div>
-                        <div class="form-link">
-                            <a href="#" class="forgot-password">Forgot Password?</a>
+                        <div class="form-container">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="remember-pass">
+                                <label class="form-check-label" for="remember-pass">
+                                    Remember Password
+                                </label>
+                            </div>
+                            <div class="form-link-pass">
+                                <a href="#" class="forgot-password">Forgot Password?</a>
+                            </div>
                         </div>
                         <div class="field button">
                             <button>Login</button>
