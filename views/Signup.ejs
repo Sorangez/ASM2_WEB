@@ -1,0 +1,35 @@
+<!-- Adding EJS header -->
+<%- include("partials/header.ejs") %>
+
+<!-- HTML code for signup -->
+
+<section class="container-login forms">
+    <!-- Sign Up --> 
+    <div class="form login">
+        <div class="form-content">
+            <header>Sign Up</header>
+            <form action="#">
+                <div class="field input-field">
+                    <input type="email" placeholder="Email" class="email">
+                </div>
+                <div class="field input-field">
+                    <input type="password" placeholder="Password" class="password">
+                    <i class='bx bx-hide hide-icon'></i>
+                </div>
+                <div class="field input-field">
+                    <input type="password" placeholder=" Re-enter Password" class="password">
+                    <i class='bx bx-hide hide-icon'></i>
+                </div>
+                <div class="field button">
+                    <button>Sign Up</button>
+                </div>
+                <div class="form-link">
+                    <span>Already have an account?<a href="/login" class="link login-link"> Login</a></span>
+                </div>
+            </form>                  
+        </div>
+    </div>
+</section>
+
+<!-- Adding EJS footer -->
+<%- include("partials/footer.ejs") %>
