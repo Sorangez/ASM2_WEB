@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/vendor.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Vendor</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar header navbar-expand-lg bg-body-tertiary border-top border-bottom">
+        <div class="container">
+            <!-- Logo and Website Name -->
+            <img class="m-2" src="../images/logo/logo.png" alt="Logo">
+            <a class="navbar-brand fs-4" href="#">Woolly Wonders</a>
+            <!-- Toggle Menu -->
+            <button class="navbar-toggler shadow-none border-bottom-0" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Side Menu Bar -->
+            <div class="sidebar offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <!-- Side Menu Header -->
+                <div class="offcanvas-header text-white border-bottom">
+                    <img class="m-2" src="../images/logo/logo.png" alt="Logo">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Woolly Wonders</h5>
+                    <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <!-- Side Menu Body -->
+                <div class="offcanvas-body d-flex flex-column p-4 flex-lg-row p-lg-2">
+                    <ul class="navbar-nav justify-content-center align-items-center flex-grow-1 fs-5 pe-3">
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" aria-current="page" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item mx-2 border-start border-end px-3">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                        <form class="d-flex mx-2 position-relative" role="search">
+                            <input class="form-control me-0 rounded-5 d-sm-inline-block" type="search"
+                                placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-light border-0" type="submit"><i
+                                    class="fa-solid fa-magnifying-glass"></i></button>
+                        </form>
+                    </ul>
+                    <!-- Login And Sign Up -->
+                    <div class="d-flex flex-column justify-content-center align-items-center gap-3 flex-lg-row">
+                        <button type="button" class="btn border-0 d-flex align-items-center">Order <img
+                                src="../images/logo/shopping-cart.png" alt="shopping cart"></button>
+                        <a href="#login" class="login-btn text-decoration-none px-3 ">Login</a>
+                        <a href="#signup" class="sign-up-btn text-white text-decoration-none px-3 py-1 rounded-4">Sign
+                            Up</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <!-- Vendor Profile -->
+        <div class="vendor-profile">
+            <img id="profile-picture" src="../images/logo/logo.png" alt="Profile Picture">
+            <div class="profile-text">
+                <div id="vendor-name">David Goggins</div>
+                <div class="info" id="business-name">Goggins inc.</div>
+                <div class="info" id="email">info@davidgoggins.com</div>
+                <div class="info" id="business-address">521 P. Kim Mã</div>
+            </div>
+        </div>
+
+        <!-- Current Listings -->
+        <div class="vendor-container">
+            <div id="vendor-title">Current listings</div>
+            <table class="product-vendor">
+                <tr>
+                    <th>
+                        <div class="product-img-header">Image</div>
+                    </th>
+                    <th>Name</th>
+                    <th>
+                        <div class="product-rating-header">Rating</div>
+                    </th>
+                    <th>Material</th>
+                    <th>
+                        <div class="product-season-header">Season</div>
+                    </th>
+                    <th>Price</th>
+                    <th>Stock</th>
+                </tr>
+                <tr>
+                    <td><img class="product-img" src="../images/logo/logo.png" alt="Product Image 1"></td>
+                    <td>
+                        <div class="product-name">Product 1</div>
+                    </td>
+                    <td>
+                        <div class="product-rating">4.5</div>
+                    </td>
+                    <td>
+                        <div class="product-material">Cotton</div>
+                    </td>
+                    <td>
+                        <div class="product-season">Spring</div>
+                    </td>
+                    <td>
+                        <div class="product-price">$19.99</div>
+                    </td>
+                    <td>
+                        <div class="product-stock">10</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img class="product-img" src="../images/logo/logo.png" alt="Product Image 2"></td>
+                    <td>
+                        <div class="product-name">Product 2</div>
+                    </td>
+                    <td>
+                        <div class="product-rating">4.2</div>
+                    </td>
+                    <td>
+                        <div class="product-material">Leather</div>
+                    </td>
+                    <td>
+                        <div class="product-season">Winter</div>
+                    </td>
+                    <td>
+                        <div class="product-price">$29.99</div>
+                    </td>
+                    <td>
+                        <div class="product-stock">5</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img class="product-img" src="../images/logo/logo.png" alt="Product Image 3"></td>
+                    <td>
+                        <div class="product-name">Product 3</div>
+                    </td>
+                    <td>
+                        <div class="product-rating">4.8</div>
+                    </td>
+                    <td>
+                        <div class="product-material">Silk</div>
+                    </td>
+                    <td>
+                        <div class="product-season">Summer</div>
+                    </td>
+                    <td>
+                        <div class="product-price">$39.99</div>
+                    </td>
+                    <td>
+                        <div class="product-stock">15</div>
+                    </td>
+                </tr>
+            </table>
+            <div class="vendor-button">
+                <!-- Button trigger modal -->
+                <button type="button" class="add-product" data-bs-toggle="modal" data-bs-target="#infoModal">
+                    Add product
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Add Product Form</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="" method="POST">
+                                    <div class="form-group">
+                                        <label for="imageInput" class="form-label">Product Image</label>
+                                        <input type="file" class="form-control" id="imageInput">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="productName" class="form-label">Product Name</label>
+                                        <input type="text" class="form-control" id="productName"
+                                            placeholder="Enter product name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="productMaterial" class="form-label">Product Material</label>
+                                        <input type="text" class="form-control" id="productMaterial"
+                                            placeholder="Enter product material">
+                                    </div>
+                                    <label for="productSeason">Choose product season</label>
+                                    <select class="form-select" id="productSeason">
+                                        <option value="Spring">Spring</option>
+                                        <option value="Summer">Summer</option>
+                                        <option value="Autumn">Autumn</option>
+                                        <option value="Winter">Winter</option>
+                                    </select>
+                                    <div class="form-group">
+                                        <label for="productPrice" class="form-label">Product Price</label>
+                                        <input type="text" class="form-control" id="productPrice"
+                                            placeholder="Enter product price">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="productDescription" class="form-label">Product description</label>
+                                        <textarea class="form-control" id="productDescription" rows="3"
+                                            maxlength="500"></textarea>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer d-flex justify-content-between">
+                                <button type="button" class="btn" data-bs-dismiss="modal"><ins>Close</ins></button>
+                                <button type="button" class="btn btn-dark">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+    <footer class="footer border-top">
+        <div class="container-footer grid--footer">
+            <div class="logo-col-lg">
+                <!-- Logo Here -->
+                <a class="footer-logo" href="#">
+                    <img class="logo" src="../images/logo/logo.png" alt="website-logo">
+                </a>
+                <p class="copyright">Copyright &copy; 2023 by Thai Nguyen. All right reserved</p>
+                <p class="copyright">
+                    Handi Resco Tower, 521 Kim Ma, Ba Dinh, Ha Noi
+                </p>
+                <ul class="social-links">
+                    <li><a href="#"><i class="social-icon fa-brands fa-square-facebook"></i></a></li>
+                    <li><a href="#"><i class="social-icon fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="social-icon fa-brands fa-github"></i></a></li>
+                </ul>
+            </div>
+            <nav class="nav-col-lg">
+                <p class="footer-heading text-center">More Information</p>
+                <ul class="footer-nav p-0">
+                    <li><a class="footer-link" href="#">About Us</a></li>
+                    <li><a class="footer-link" href="#">Copyright</a></li>
+                    <li><a class="footer-link" href="#">Terms & Conditions</a></li>
+                    <li><a class="footer-link" href="#">Privacy</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

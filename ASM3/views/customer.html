@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/customer.css">
+    <title>Customer</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar header navbar-expand-lg bg-body-tertiary border-top border-bottom">
+        <div class="container">
+            <!-- Logo and Website Name -->
+            <img class="m-2" src="../images/logo/logo.png" alt="Logo">
+            <a class="navbar-brand fs-4" href="#">Woolly Wonders</a>
+            <!-- Toggle Menu -->
+            <button class="navbar-toggler shadow-none border-bottom-0" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Side Menu Bar -->
+            <div class="sidebar offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <!-- Side Menu Header -->
+                <div class="offcanvas-header text-white border-bottom">
+                    <img class="m-2" src="../images/logo/logo.png" alt="Logo">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Woolly Wonders</h5>
+                    <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <!-- Side Menu Body -->
+                <div class="offcanvas-body d-flex flex-column p-4 flex-lg-row p-lg-2">
+                    <ul class="navbar-nav justify-content-center align-items-center flex-grow-1 fs-5 pe-3">
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" aria-current="page" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item mx-2 border-start border-end px-3">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                        <form class="d-flex mx-2 position-relative" role="search">
+                            <input class="form-control me-0 rounded-5 d-sm-inline-block" type="search"
+                                placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-light border-0" type="submit"><i
+                                    class="fa-solid fa-magnifying-glass"></i></button>
+                        </form>
+                    </ul>
+                    <!-- Login And Sign Up -->
+                    <div class="d-flex flex-column justify-content-center align-items-center gap-3 flex-lg-row">
+                        <button type="button" class="btn border-0 d-flex align-items-center">Order <img
+                                src="../images/logo/shopping-cart.png" alt="shopping cart"></button>
+                        <a href="#login" class="login-btn text-decoration-none px-3 ">Login</a>
+                        <a href="#signup" class="sign-up-btn text-white text-decoration-none px-3 py-1 rounded-4">Sign
+                            Up</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <!-- Product Catagories -->
+        <div class="navigation d-flex justify-content-center py-4">
+            <div class="d-flex mt-4">
+                <div class="product-icon px-lg-5 px-md-4 px-sm-4 px-3 text-center">
+                    <img src="../images/products/black.png" alt="T-shirt">
+                    <p><a class="text-decoration-none text-black" href="customer.html">Shirt</a></p>
+                </div>
+                <div class="product-icon px-lg-5 px-md-4 px-sm-4 px-3 text-center">
+                    <img src="../images/products/dress.png" alt="Dress">
+                    <p><a class="text-decoration-none text-black" href="customer.html">Dress</a></p>
+                </div>
+                <div class="product-icon px-lg-5 px-md-4 px-sm-4 px-3 text-center">
+                    <img src="../images/products/polo-shirt.png" alt="Polo-Shirt">
+                    <p><a class="text-decoration-none text-black" href="customer.html">Polo</a></p>
+                </div>
+                <div class="product-icon px-lg-5 px-md-4 px-sm-4 px-3 text-center">
+                    <img src="../images/products/skirt.png" alt="Skirt">
+                    <p><a class="text-decoration-none text-black" href="customer.html">Skirt</a></p>
+                </div>
+                <div class="product-icon px-lg-5 px-md-4 px-sm-4 px-3 text-center">
+                    <img src="../images/products/wedding-suit.png" alt="Suit">
+                    <p><a class="text-decoration-none text-black" href="customer.html">Suit</a></p>
+                </div>
+            </div>
+            <div class="d-flex align-items-center">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn rounded-5 border ms-4 ms-sm-1 ms-md-4" data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop">
+                    <img class="" src="../images/products/filter.png" alt="Filter">
+                    Filter
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title fw-bold" id="staticBackdropLabel">Filter</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div>
+                                    <p class="fw-bold">Price Range</p>
+                                    <div class="price-input my-4">
+                                        <div class="field">
+                                            <span>Min</span>
+                                            <input type="number" class="input-min rounded-3" value="50">
+                                        </div>
+                                        <div class="separator">-</div>
+                                        <div class="field">
+                                            <span>Max</span>
+                                            <input type="number" class="input-max rounded-3" value="150">
+                                        </div>
+                                    </div>
+                                    <div class="slider">
+                                        <div class="progress"></div>
+                                    </div>
+                                    <div class="range-input">
+                                        <input type="range" class="range-min" min="0" max="200" value="50" step="5">
+                                        <input type="range" class="range-max" min="0" max="200" value="150" step="5">
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="fw-bold mt-4">Fabric Type</p>
+                                    <div class="check-element">
+                                        <div class="check-big-element">
+                                            <div class="check-small-element">
+                                                <input type="checkbox" class="checkbox" id="checkbox-cotton">
+                                                <label for="check">Cotton</label>
+                                            </div>
+                                            <div class="check-small-element">
+                                                <input type="checkbox" class="checkbox" id="checkbox-Polyester">
+                                                <label for="check">Polyester</label>
+                                            </div>
+                                            <div class="check-small-element">
+                                                <input type="checkbox" class="checkbox" id="checkbox-Silk">
+                                                <label for="check">Silk</label>
+                                            </div>
+
+                                        </div>
+                                        <div class="check-big-element">
+                                            <div class="check-small-element">
+                                                <input type="checkbox" class="checkbox" id="checkbox-Wool">
+                                                <label for="check">Wool</label>
+                                            </div>
+                                            <div class="check-small-element">
+                                                <input type="checkbox" class="checkbox" id="checkbox-Linen">
+                                                <label for="check">Linen</label>
+                                            </div>
+                                            <div class="check-small-element">
+                                                <input type="checkbox" class="checkbox" id="checkbox-Nylon">
+                                                <label for="check">Nylon</label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="fw-bold mt-4">Seasonal Fabrics</p>
+                                    <div class="seasonal-fabric">
+                                        <button class="season-button py-2 pe-5 rounded-3" id="season-Button"><img
+                                                src="../images/seasons/spring.png" alt="spring">
+                                            Spring</button>
+                                        <button class="season-button py-2 pe-5 rounded-3" id="season-Button"><img
+                                                src="../images/seasons/summer.png" alt="summer">
+                                            Summer</button>
+                                        <button class="season-button py-2 pe-5 rounded-3" id="season-Button"><img
+                                                src="../images/seasons/autum.png" alt="autum">
+                                            Autum</button>
+                                        <button class="season-button py-2 pe-5 rounded-3" id="season-Button"><img
+                                                src="../images/seasons/winter.png" alt="winter">
+                                            Winter</button>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="fw-bold mt-4">Fabric Care</p>
+                                    <div class="check-element">
+                                        <div class="check-big-element">
+                                            <div class="check-small-element">
+                                                <input type="checkbox" class="checkbox" id="checkbox-hand-washing">
+                                                <label for="check">Hand Washing</label>
+                                            </div>
+                                            <div class="check-small-element">
+                                                <input type="checkbox" class="checkbox" id="checkbox-machine-washing">
+                                                <label for="check">Machine Washing</label>
+                                            </div>
+                                            <div class="check-small-element">
+                                                <input type="checkbox" class="checkbox" id="checkbox-laundry-bag">
+                                                <label for="check">Use a Laundry Bag</label>
+                                            </div>
+
+                                        </div>
+                                        <div class="check-big-element">
+                                            <div class="check-small-element">
+                                                <input type="checkbox" class="checkbox" id="checkbox-Ironing">
+                                                <label for="check">Ironing</label>
+                                            </div>
+                                            <div class="check-small-element">
+                                                <input type="checkbox" class="checkbox" id="checkbox-dry-cleaning">
+                                                <label for="check">Dry Cleaning</label>
+                                            </div>
+                                            <div class="check-small-element">
+                                                <input type="checkbox" class="checkbox" id="checkbox-Folding">
+                                                <label for="check">Folding vs. Hanging</label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="modal-footer d-flex justify-content-between">
+                                <button type="button" class="btn"><ins>Clear all</ins></button>
+                                <button type="button" class="btn btn-dark">Show</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Product infomation -->
+        <div class="product-main pb-5">
+            <div class="product-info fs-5">
+                <div class="product-info-container">
+                    <div class="sub-product-info-container">
+                        <img class="product-img rounded-5" src="../images/cloth/test1.jpg" alt="test1">
+                        <i class="fa-regular fa-heart position-absolute"></i>
+                        <button type="button" class="view-detail-btn position-absolute px-2 py-1"><a
+                                class="text-decoration-none" href="view-details.html">View Details</a></button>
+                    </div>
+
+                    <div class="product-title mt-2">
+                        <p class="product-name fw-bold">Gray Color</p>
+                        <p><i class="product-star fa-solid fa-star"></i> 4.95</p>
+                    </div>
+                    <p class="product-original my-0 fst-italic fw-light">Polyester</p>
+                    <p class="product-purpose my-0 fst-italic fw-light">Summer</p>
+                    <p class="product-price fw-bold my-0">10$/m</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer border-top">
+        <div class="container-footer grid--footer">
+            <div class="logo-col-lg">
+                <!-- Logo Here -->
+                <a class="footer-logo" href="#">
+                    <img class="logo" src="../images/logo/logo.png" alt="website-logo">
+                </a>
+                <p class="copyright">Copyright &copy; 2023 by Thai Nguyen. All right reserved</p>
+                <p class="copyright">
+                    Handi Resco Tower, 521 Kim Ma, Ba Dinh, Ha Noi
+                </p>
+                <ul class="social-links">
+                    <li><a href="#"><i class="social-icon fa-brands fa-square-facebook"></i></a></li>
+                    <li><a href="#"><i class="social-icon fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="social-icon fa-brands fa-github"></i></a></li>
+                </ul>
+            </div>
+            <nav class="nav-col-lg">
+                <p class="footer-heading text-center">More Information</p>
+                <ul class="footer-nav p-0">
+                    <li><a class="footer-link" href="#">About Us</a></li>
+                    <li><a class="footer-link" href="#">Copyright</a></li>
+                    <li><a class="footer-link" href="#">Terms & Conditions</a></li>
+                    <li><a class="footer-link" href="#">Privacy</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
