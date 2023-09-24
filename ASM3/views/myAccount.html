@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/myAccount.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>My Account</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar header navbar-expand-lg bg-body-tertiary border-top border-bottom">
+        <div class="container">
+            <!-- Logo and Website Name -->
+            <img class="m-2" src="../images/logo/logo.png" alt="Logo">
+            <a class="navbar-brand fs-4" href="#">Woolly Wonders</a>
+            <!-- Toggle Menu -->
+            <button class="navbar-toggler shadow-none border-bottom-0" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Side Menu Bar -->
+            <div class="sidebar offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <!-- Side Menu Header -->
+                <div class="offcanvas-header text-white border-bottom">
+                    <img class="m-2" src="../images/logo/logo.png" alt="Logo">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Woolly Wonders</h5>
+                    <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <!-- Side Menu Body -->
+                <div class="offcanvas-body d-flex flex-column p-4 flex-lg-row p-lg-2">
+                    <ul class="navbar-nav justify-content-center align-items-center flex-grow-1 fs-5 pe-3">
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" aria-current="page" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item mx-2 border-start border-end px-3">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                        <form class="d-flex mx-2 position-relative" role="search">
+                            <input class="form-control me-0 rounded-5 d-sm-inline-block" type="search"
+                                placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-light border-0" type="submit"><i
+                                    class="fa-solid fa-magnifying-glass"></i></button>
+                        </form>
+                    </ul>
+                    <!-- Login And Sign Up -->
+                    <div class="d-flex flex-column justify-content-center align-items-center gap-3 flex-lg-row">
+                        <button type="button" class="btn border-0 d-flex align-items-center">Order <img
+                                src="../images/logo/shopping-cart.png" alt="shopping cart"></button>
+                        <a href="#login" class="login-btn text-decoration-none px-3 ">Login</a>
+                        <a href="#signup" class="sign-up-btn text-white text-decoration-none px-3 py-1 rounded-4">Sign
+                            Up</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="container-account m-5">
+            <!-- Profile -->
+            <aside class="profile">
+                <img id="profile-picture" src="../images/logo/Pfp.jpg" alt="Profile picture">
+                <p id="username">David Goggins</p>
+            </aside>
+            <section class="info-container">
+                <div class="info-text">
+                    <div class="info">
+                        <p>Email: </p>&nbsp<p class="email"> info@davidgoggins.com</p>
+                    </div>
+                    <div class="info">
+                        <p>Address: </p>&nbsp<p class="address"> 521 P. Kim Mã</p>
+                    </div>
+                    <div class="info">
+                        <p>Payment method:</p>&nbsp<p id="billing-address"> Paypal</p>
+                    </div>
+                </div>
+                <div class="btn-container">
+                    <button type="button" id="update-info-btn" data-bs-toggle="modal" data-bs-target="#infoModal">
+                        <span><i class='bx bx-refresh' id="update-icon"></i>
+                            <p class="btn-text">Update Information</p>
+                        </span>
+                    </button>
+                    <a href="login"><button id="logout-btn">
+                            <span><i class='bx bx-log-out' id="logout-icon"></i>
+                                <p class="btn-text">Log Out</p>
+                            </span>
+                        </button></a>
+                </div>
+            </section>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Update Information</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="" method="POST">
+                            <div class="form-group">
+                                <label for="imageInput" class="form-label">Profile Image</label>
+                                <input type="file" class="form-control" id="imageInput">
+                            </div>
+                            <div class="form-group">
+                                <label for="username-change" class="form-label">Username</label>
+                                <input type="text" class="form-control" id="username-change"
+                                    placeholder="Enter username">
+                            </div>
+                            <div class="form-group">
+                                <label for="productMaterial" class="form-label">Email</label>
+                                <input type="text" class="form-control" id="productMaterial" placeholder="Enter email">
+                            </div>
+                            <div class="form-group">
+                                <label for="address-change" class="form-label">Address</label>
+                                <input type="text" class="form-control" id="address-change" placeholder="Enter address">
+                            </div>
+                            <label for="paymentMethod">Payment method</label>
+                            <select class="form-select" id="paymentMethod">
+                                <option value="Card">Credit/Debit Card</option>
+                                <option value="Paypal">Paypal</option>
+                                <option value="ZaloPay">ZaloPay</option>
+                                <option value="VNPay">VNPay</option>
+                            </select>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn"><ins>Clear all</ins></button>
+                        <button type="button" class="btn btn-dark">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+    <footer class="footer border-top">
+        <div class="container-footer grid--footer">
+            <div class="logo-col-lg">
+                <!-- Logo Here -->
+                <a class="footer-logo" href="#">
+                    <img class="logo" src="../images/logo/logo.png" alt="website-logo">
+                </a>
+                <p class="copyright">Copyright &copy; 2023 by Thai Nguyen. All right reserved</p>
+                <p class="copyright">
+                    Handi Resco Tower, 521 Kim Ma, Ba Dinh, Ha Noi
+                </p>
+                <ul class="social-links">
+                    <li><a href="#"><i class="social-icon fa-brands fa-square-facebook"></i></a></li>
+                    <li><a href="#"><i class="social-icon fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="social-icon fa-brands fa-github"></i></a></li>
+                </ul>
+            </div>
+            <nav class="nav-col-lg">
+                <p class="footer-heading text-center">More Information</p>
+                <ul class="footer-nav p-0">
+                    <li><a class="footer-link" href="#">About Us</a></li>
+                    <li><a class="footer-link" href="#">Copyright</a></li>
+                    <li><a class="footer-link" href="#">Terms & Conditions</a></li>
+                    <li><a class="footer-link" href="#">Privacy</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
