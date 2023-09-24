@@ -1,0 +1,116 @@
+<%- include('partials/global_header.ejs') %>
+        <!-- Vendor Profile -->
+        <div class="vendor-profile">
+            <img id="profile-picture" src="images/logo/logo.png" alt="Profile Picture">
+            <div class="profile-text">
+                <div id="vendor-name"><%= vendor.username %></div>
+                <div class="info" id="business-name"><%= vendor.business %></div>
+                <div class="info" id="email"><%= vendor.email %></div>
+                <div class="info" id="business-address"><%= vendor.vendor_address %></div>
+            </div>
+        </div>
+
+        <!-- Current Listings -->
+        <div class="vendor-container">
+            <div id="vendor-title">Current listings</div>
+            <table class="product-vendor">
+                <tr>
+                    <th>
+                        <div class="product-img-header">Image</div>
+                    </th>
+                    <th>Name</th>
+                    <th>Material</th>
+                    <th>
+                        <div class="product-season-header">Season</div>
+                    </th>
+                    <th>Price</th>
+                    <th>Stock</th>
+                </tr>
+
+                <% for( let i = 0; i < products.length; i++ ) { %>
+                    <tr>
+                        <td><img class="product-img-vendor" src="images/upload_vendor/<%= products[i].image_url %>" alt="Product Image 1"></td>
+                        <td>
+                            <div class="product-name"><%= products[i].name %></div>
+                        </td>
+                        <td>
+                            <div class="product-material"><%= products[i].material %></div>
+                        </td>
+                        <td>
+                            <div class="product-season"><%= products[i].season %></div>
+                        </td>
+                        <td>
+                            <div class="product-price"><%= products[i].price %></div>
+                        </td>
+                        <td>
+                            <div class="product-stock"><%= products[i].stock %></div>
+                        </td>
+                    </tr>
+                <% } %>
+            </table>
+            <div class="vendor-button">
+                <!-- Button trigger modal -->
+                <button type="button" class="add-product" data-bs-toggle="modal" data-bs-target="#infoModal">
+                    Add product
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Add Product Form</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="/vendor" method="POST" enctype="multipart/form-data">
+                                    <div class="form-group">
+                                        <label for="imageInput" class="form-label">Product Image</label>
+                                        <input type="file" class="form-control" id="imageInput" name="image_url">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="productName" class="form-label">Product Name</label>
+                                        <input type="text" class="form-control" id="productName"
+                                            placeholder="Enter product name" name="name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="productMaterial" class="form-label">Product Material</label>
+                                        <input type="text" class="form-control" id="productMaterial"
+                                            placeholder="Enter product material" name="material">
+                                    </div>
+                                    <label for="productSeason">Choose product season</label>
+                                    <select class="form-select" id="productSeason" name="season">
+                                        <option value="Spring">Spring</option>
+                                        <option value="Summer">Summer</option>
+                                        <option value="Autumn">Autumn</option>
+                                        <option value="Winter">Winter</option>
+                                    </select>
+                                    <div class="form-group">
+                                        <label for="productPrice" class="form-label">Product Price</label>
+                                        <input type="text" class="form-control" id="productPrice"
+                                            placeholder="Enter product price" name="price">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="productPrice" class="form-label">Stock</label>
+                                        <input type="text" class="form-control" id="productPrice"
+                                            placeholder="Enter stock" name="stock">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="productDescription" class="form-label">Product description</label>
+                                        <textarea class="form-control" id="productDescription" rows="3"
+                                            maxlength="500" name="product_description"></textarea>
+                                    </div>
+                                    <div class="modal-footer d-flex justify-content-between">
+                                        <button type="button" class="btn" data-bs-dismiss="modal"><ins>Close</ins></button>
+                                        <button type="submit" class="btn btn-dark">Save changes</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<%- include('partials/global_footer.ejs') %>

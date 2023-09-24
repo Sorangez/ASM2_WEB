@@ -1,0 +1,46 @@
+<%- include('partials/global_header.ejs') %>
+        <!-- cart -->
+        <div class="cart-container">
+            <div id="cart-title">Shopping Cart</div>
+            <table class="product-cart">
+                <tr>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Size</th>
+                    <th>Material</th>
+                    <th><div class="season-header">Season</div></th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td><img class="product-img-vendor" src="images/logo/Pfp.jpg" alt="Product Image 1"></td>
+                    <td><div class="product-name">Product 1</div></td>
+                    <td><div class="product-size">4.5</div></td>
+                    <td><div class="product-material">Cotton</div></td>
+                    <td><div class="product-season">Spring</div></td>
+                    <td><div class="products-price">19.99</div></td>
+                </tr>
+                <tr>
+                    <td><img class="product-img-vendor" src="images/logo/Pfp.jpg" alt="Product Image 2"></td>
+                    <td><div class="product-name">Product 2</div></td>
+                    <td><div class="product-size">4.2</div></td>
+                    <td><div class="product-material">Leather</div></td>
+                    <td><div class="product-season">Winter</div></td>
+                    <td><div class="products-price">29.99</div></td>
+                </tr>
+                <tr>
+                    <td><img class="product-img-vendor" src="images/logo/Pfp.jpg" alt="Product Image 3"></td>
+                    <td><div class="product-name">Product 3</div></td>
+                    <td><div class="product-size">4.8</div></td>
+                    <td><div class="product-material">Silk</div></td>
+                    <td><div class="product-season">Summer</div></td>
+                    <td><div class="products-price">39.99</div></td>
+                </tr>
+            </table>
+            <p id="result">Total Sum: <span id="sum">0</span></p>
+            <div class="checkout-container">
+                <button type="button" class="checkout-btn" data-bs-toggle="modal" data-bs-target="#infoModal">
+                    Check out
+                </button>
+            </div>
+        </div>
+<%- include('partials/global_footer.ejs') %>
