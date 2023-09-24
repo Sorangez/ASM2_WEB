@@ -54,20 +54,22 @@
                         <!-- Vendor -->
                         <section id="vendor">
                             <div class="field input-field">
-                                <input type="text" class="form-control" name="business" placeholder="Business name"
-                                    >
+                                <input type="text" class="form-control" name="business" placeholder="Business name">
                             </div>
+
                             <div class="field input-field">
-                                <input type="text" class="form-control" name="address" placeholder="Address">
+                                <input type="text" class="form-control" name="vendor_address" placeholder="Address">
                             </div>
+
                             <div class="field drop-down">
-                                <select class="field form-select" name="vendorCity">
+                                <select class="field form-select" name="vendor_city">
                                     <option value="Select your city" disabled selected>Select your city</option>
                                     <option value="Hanoi">Hanoi</option>
                                     <option value="Danang">Da Nang</option>
                                     <option value="Ho Chi Minh">Ho Chi Minh</option>
                                 </select>
                             </div>
+
                         </section>
                         <!-- Shipper -->
                         <section id="shipper">
@@ -82,7 +84,7 @@
                             </div>
                         </section>
                         <div class="field button">
-                            <button type="submit">Sign Up</button>
+                            <button id="signup_button" type="submit">Sign Up</button>
                         </div>
                         <div class="form-link">
                             <span>Already have an account?<a href="/login" class="link login-link"> Login</a></span>

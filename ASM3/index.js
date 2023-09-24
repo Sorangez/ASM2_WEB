@@ -26,8 +26,8 @@ const customer_schema = new mongoose.Schema({
     email: { type: String, unique: true, required: true },
     password: { type: String, required: true },
     address: { type: String, required: true },
-    city: String,
-    payment: String,
+    city: { type:String, required: true },
+    payment: { type:String, required: true },
 });
 
 const vendor_schema = new mongoose.Schema({
@@ -35,9 +35,9 @@ const vendor_schema = new mongoose.Schema({
     username: { type: String, unique: true, required: true },
     email: { type: String, unique: true, required: true },
     password: { type: String, required: true },
-    businessName: { type: String, required: true, unique: true }, 
+    business: { type: String, required: true, unique: true }, 
     vendor_address: { type: String, required: true },
-    city: String,
+    vendor_city: { type:String, required: true },
 });
 
 const shipper_schema = new mongoose.Schema({
@@ -45,7 +45,7 @@ const shipper_schema = new mongoose.Schema({
     username: { type: String, unique: true, required: true },
     email: { type: String, unique: true, required: true },
     password: { type: String, required: true },
-    city: String,
+    ship_city: { type:String, required: true },
 });
 
 // Creating Customers Models
@@ -76,7 +76,7 @@ app.post("/submit", (req, res) => {
             .catch((error) => console.log(error));
 
     } else if (req.body["role"] === "vendor") {
-        console.log(req.body["address"]);
+
         const vendor = new Vendors(req.body);
         vendor.save()
             .then((vendor) => console.log(`${vendor} has been added to MongoDB`))
@@ -85,9 +85,11 @@ app.post("/submit", (req, res) => {
     } else {
         const shipper = new Shippers(req.body);
         shipper.save()
-        .then((shipper) => console.log(`${shipper} has been added to MongoDB`))
-        .catch((error) => console.log(error));
+            .then((shipper) => console.log(`${shipper} has been added to MongoDB`))
+            .catch((error) => console.log(error));
     }
+
+    res.redirect("Login")
 });
 
 

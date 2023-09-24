@@ -38,3 +38,11 @@ roleDropdown.addEventListener('change', function() {
         shipperSection.style.display = 'block';
     }
 });
+
+  // Get a reference to the button element by its ID
+  const signupButton = document.getElementById('signup_button');
+
+  // Add a click event listener to the button
+  signupButton.addEventListener('click', function() {
+    alert('Your account has been created!'); // Show an alert when the button is clicked
+  });
