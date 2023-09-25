@@ -1,0 +1,44 @@
+<!-- RMIT University Vietnam
+  Course: COSC2430 Web Programming
+  Semester: 2023A
+  Assessment: Assignment 2
+  Author: Group 4
+  ID: 
+    Nguyen Thanh Tung - s3979425
+    Nguyen The Vinh - s3979366
+    Nguyen Ba Lam Quang Thai - s3975154
+    Nguyen Nghia Hiep - s3978270
+    Dang Trung Kien - s3979510
+  Acknowledgement: ChatGPT, GoogleFonts, BoxIcon, Bootstrap -->
+<%- include('partials/global_header.ejs') %>
+        <!-- cart -->
+        <div class="cart-container">
+            <div id="cart-title">Shopping Cart</div>
+            <table class="product-cart">
+                <tr>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Size</th>
+                    <th>Material</th>
+                    <th><div class="season-header">Season</div></th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td><img class="product-img-vendor" src="/images/upload_vendor/<%= product.image_url %>" alt="Product Image 1"></td>
+                    <td><div class="product-name"><%= product.name %></div></td>
+                    <td><div class="product-size"><%= size %></div></td>
+                    <td><div class="product-material"><%= product.material %></div></td>
+                    <td><div class="product-season"><%= product.season %></div></td>
+                    <td><div class="products-price"><%= product.price %></div></td>
+                </tr>
+
+            
+            </table>
+            <p id="result">Total Sum: <%= totalPrice %><span id="sum">0</span></p>
+            <div class="checkout-container">
+                <button type="button" class="checkout-btn" data-bs-toggle="modal" data-bs-target="#infoModal">
+                    Check out
+                </button>
+            </div>
+        </div>
+<%- include('partials/global_footer.ejs') %>

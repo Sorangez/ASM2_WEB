@@ -1,0 +1,403 @@
+/* // RMIT University Vietnam
+//   Course: COSC2430 Web Programming
+//   Semester: 2023A
+//   Assessment: Assignment 2
+//   Author: Group 4
+//   ID: 
+//     Nguyen Thanh Tung - s3979425
+//     Nguyen The Vinh - s3979366
+//     Nguyen Ba Lam Quang Thai - s3975154
+//     Nguyen Nghia Hiep - s3978270
+//     Dang Trung Kien - s3979510
+//   Acknowledgement: ChatGPT, GoogleFonts, BoxIcon, Bootstrap */
+:root {
+    --component-color: #ff385c
+}
+
+.nav-link {
+    color: #222;
+    border-bottom: 1px solid transparent;
+    transition: all 0.6s;
+}
+
+.nav-link:hover,
+.nav-link:active {
+    border-bottom: 1px solid var(--component-color);
+    color: var(--component-color);
+}
+
+.login-btn {
+    color: var(--component-color);
+}
+
+.sign-up-btn {
+    background-color: var(--component-color);
+}
+
+.sign-up-btn:hover {
+    background-color: #FF718B;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn-outline-light {
+    position: absolute;
+    color: var(--component-color);
+    right: 0;
+}
+
+.btn-outline-light:hover,
+.btn-outline-light:link,
+.login-btn:hover {
+    color: #222;
+    background: transparent;
+}
+
+/* Sticky Nav */
+
+.sticky .header {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    height: 5rem;
+    width: 100%;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: rgba(255, 255, 255, 0.97);
+    z-index: 999;
+    box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+}
+
+/* Vendor Profile */
+
+.shipper-profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 5% 10%;
+}
+
+#shipper-profile-picture {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.profile-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 3rem;
+}
+
+#shipper-name {
+    font-size: 64px;
+    font-weight: bold;
+}
+
+.info {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.shipper-container {
+    border: 1px solid rgba(0, 0, 0, 0.7);
+    border-radius: 6px;
+    margin: 10%;
+    width: 80%;
+    padding: 30px;
+    box-shadow: 0px 1px 6px 1px rgba(22, 18, 18, 0.7);
+}
+
+#shipper-title {
+    padding: 10px 0 5px 0;
+    border-bottom: 2px solid #ff385c;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+
+.orders {
+    width: 100%;
+    font-size: 18px;
+    text-align: center;
+}
+
+.products {
+    border: none;
+    background-color: white;
+}
+
+/* Modal */
+
+/* Style for the button that opens the modal */
+.custom-open-button {
+    background-color: #222;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Style for the modal container */
+.custom-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background */
+    z-index: 999;
+}
+
+/* Style for the modal content */
+.custom-modal-content {
+    text-align: start;
+    background-color: #ffffff;
+    width: 50%;
+    /* Set the width to 50% of the viewport */
+    max-width: 50%;
+    /* Optional: Set a maximum width */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* footer section */
+
+.grid--footer {
+    display: grid;
+    column-gap: 3.2rem;
+    gap: 3.2rem;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+}
+
+.footer {
+    padding: 3.2rem 9.6rem;
+    /* border-top: 1px solid #CACACA; */
+    background-color: #fff;
+}
+
+.logo-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-logo {
+    display: block;
+    margin-bottom: 2.4rem;
+    display: flex;
+    justify-content: center;
+}
+
+.social-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2.4rem;
+    padding: 0;
+}
+
+.footer-nav li {
+    text-align: center;
+}
+
+.social-icon {
+    margin-top: 1rem;
+    font-size: 1.8rem;
+    color: #222;
+}
+
+.social-icon:hover,
+.social-icon:active {
+    transition: all 0.6s;
+    transform: translateY(-20%);
+    color: var(--component-color);
+}
+
+.copyright {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #222;
+    margin-top: auto;
+    text-align: center;
+}
+
+.footer-heading {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.footer-nav {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #222;
+    transition: all 0.3s;
+}
+
+.footer-link:hover,
+.footer-link:active {
+    color: var(--component-color);
+}
+
+@media (max-width: 992px) {
+    .sidebar {
+        /* background-color: rgba(255, 255, 255, 0.15); */
+        background: linear-gradient(0.85turn, #fff, #e6afb9);
+    }
+
+    .custom-modal-content {
+        width: 70%;
+    }
+
+    .profile-text {
+        padding-left: 0;
+    }
+
+    .shipper-profile {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .info {
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .custom-modal-content {
+        width: 80%;
+    }
+
+    #shipper-profile-picture {
+        height: 250px;
+        width: 250px;
+    }
+
+    #shipper-name {
+        font-size: 56px;
+    }
+
+    .info {
+        font-size: 20px;
+    }
+
+    .shipper-container {
+        border: none;
+        padding: 30px;
+        box-shadow: none;
+        margin: 0;
+        width: 100%;
+    }
+
+    .address,
+    .order-address,
+    .price,
+    .order-price {
+        display: none;
+    }
+
+    #shipper-title {
+        text-align: center;
+    }
+
+    .orders {
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width: 575px) {
+
+    .seasonal-fabric {
+        flex-wrap: wrap;
+    }
+
+    .container-footer {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .custom-modal-content {
+        width: 90%;
+    }
+
+    #shipper-profile-picture {
+        height: 200px;
+        width: 200px;
+    }
+
+    .shipper-profile {
+        margin: 5% 0;
+    }
+
+    .info {
+        font-size: 18px;
+    }
+
+    #shipper-title {
+        font-size: 24px;
+    }
+
+    #shipper-name {
+        font-size: 45px;
+    }
+
+    .orders {
+        font-size: 14px;
+    }
+}
+
+
+@media (max-width: 425px) {
+
+    #shipper-profile-picture {
+        height: 200px;
+        width: 200px;
+    }
+
+    #shipper-name {
+        font-size: 40px;
+    }
+
+    .info {
+        font-size: 16px;
+    }
+
+    .orders {
+        font-size: 12px;
+    }
+
+}
+
+@media (max-width: 325px) {
+    #shipper-profile-picture {
+        height: 180px;
+        width: 180px;
+    }
+
+    #shipper-name {
+        font-size: 36px;
+    }
+
+    .info {
+        font-size: 14px;
+    }
+}
