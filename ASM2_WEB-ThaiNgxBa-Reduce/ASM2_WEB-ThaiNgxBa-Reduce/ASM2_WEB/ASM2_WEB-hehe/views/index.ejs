@@ -1,0 +1,192 @@
+<%- include('partials/global_header.ejs') %>
+
+        <!-- Product Catagories -->
+        <div class="navigation d-flex justify-content-center py-4">
+            <div class="d-flex mt-4">
+                <div class="product-icon px-lg-5 px-md-4 px-sm-4 px-3 text-center">
+                    <img src="images/products/black.png" alt="T-shirt">
+                    <p><a class="text-decoration-none text-black" href="/customer">Shirt</a></p>
+                </div>
+                <div class="product-icon px-lg-5 px-md-4 px-sm-4 px-3 text-center">
+                    <img src="images/products/dress.png" alt="Dress">
+                    <p><a class="text-decoration-none text-black" href="/customer">Dress</a></p>
+                </div>
+                <div class="product-icon px-lg-5 px-md-4 px-sm-4 px-3 text-center">
+                    <img src="images/products/polo-shirt.png" alt="Polo-Shirt">
+                    <p><a class="text-decoration-none text-black" href="/customer">Polo</a></p>
+                </div>
+                <div class="product-icon px-lg-5 px-md-4 px-sm-4 px-3 text-center">
+                    <img src="images/products/skirt.png" alt="Skirt">
+                    <p><a class="text-decoration-none text-black" href="/customer">Skirt</a></p>
+                </div>
+                <div class="product-icon px-lg-5 px-md-4 px-sm-4 px-3 text-center">
+                    <img src="images/products/wedding-suit.png" alt="Suit">
+                    <p><a class="text-decoration-none text-black" href="/customer">Suit</a></p>
+                </div>
+            </div>
+            <div class="d-flex align-items-center">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn rounded-5 border ms-4 ms-sm-1 ms-md-4" data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop">
+                    <img class="" src="images/products/filter.png" alt="Filter">
+                    Filter
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title fw-bold" id="staticBackdropLabel">Filter</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div>
+                                    <p class="fw-bold">Price Range</p>
+                                    <div class="price-input my-4">
+                                        <div class="field">
+                                            <span>Min</span>
+                                            <input type="number" class="input-min rounded-3" value="50">
+                                        </div>
+                                        <div class="separator">-</div>
+                                        <div class="field">
+                                            <span>Max</span>
+                                            <input type="number" class="input-max rounded-3" value="150">
+                                        </div>
+                                    </div>
+                                    <div class="slider">
+                                        <div class="progress"></div>
+                                    </div>
+                                    <div class="range-input">
+                                        <input type="range" class="range-min" min="0" max="200" value="50" step="5">
+                                        <input type="range" class="range-max" min="0" max="200" value="150" step="5">
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="fw-bold mt-4">Fabric Type</p>
+                                    <div class="check-element">
+                                        <div class="check-big-element">
+                                            <div class="check-small-element">
+                                                <input type="checkbox" class="checkbox" id="checkbox-cotton">
+                                                <label for="check">Cotton</label>
+                                            </div>
+                                            <div class="check-small-element">
+                                                <input type="checkbox" class="checkbox" id="checkbox-Polyester">
+                                                <label for="check">Polyester</label>
+                                            </div>
+                                            <div class="check-small-element">
+                                                <input type="checkbox" class="checkbox" id="checkbox-Silk">
+                                                <label for="check">Silk</label>
+                                            </div>
+
+                                        </div>
+                                        <div class="check-big-element">
+                                            <div class="check-small-element">
+                                                <input type="checkbox" class="checkbox" id="checkbox-Wool">
+                                                <label for="check">Wool</label>
+                                            </div>
+                                            <div class="check-small-element">
+                                                <input type="checkbox" class="checkbox" id="checkbox-Linen">
+                                                <label for="check">Linen</label>
+                                            </div>
+                                            <div class="check-small-element">
+                                                <input type="checkbox" class="checkbox" id="checkbox-Nylon">
+                                                <label for="check">Nylon</label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="fw-bold mt-4">Seasonal Fabrics</p>
+                                    <div class="seasonal-fabric">
+                                        <button class="season-button py-2 pe-5 rounded-3" id="season-Button"><img
+                                                src="images/seasons/spring.png" alt="spring">
+                                            Spring</button>
+                                        <button class="season-button py-2 pe-5 rounded-3" id="season-Button"><img
+                                                src="images/seasons/summer.png" alt="summer">
+                                            Summer</button>
+                                        <button class="season-button py-2 pe-5 rounded-3" id="season-Button"><img
+                                                src="images/seasons/autum.png" alt="autum">
+                                            Autum</button>
+                                        <button class="season-button py-2 pe-5 rounded-3" id="season-Button"><img
+                                                src="images/seasons/winter.png" alt="winter">
+                                            Winter</button>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="fw-bold mt-4">Fabric Care</p>
+                                    <div class="check-element">
+                                        <div class="check-big-element">
+                                            <div class="check-small-element">
+                                                <input type="checkbox" class="checkbox" id="checkbox-hand-washing">
+                                                <label for="check">Hand Washing</label>
+                                            </div>
+                                            <div class="check-small-element">
+                                                <input type="checkbox" class="checkbox" id="checkbox-machine-washing">
+                                                <label for="check">Machine Washing</label>
+                                            </div>
+                                            <div class="check-small-element">
+                                                <input type="checkbox" class="checkbox" id="checkbox-laundry-bag">
+                                                <label for="check">Use a Laundry Bag</label>
+                                            </div>
+
+                                        </div>
+                                        <div class="check-big-element">
+                                            <div class="check-small-element">
+                                                <input type="checkbox" class="checkbox" id="checkbox-Ironing">
+                                                <label for="check">Ironing</label>
+                                            </div>
+                                            <div class="check-small-element">
+                                                <input type="checkbox" class="checkbox" id="checkbox-dry-cleaning">
+                                                <label for="check">Dry Cleaning</label>
+                                            </div>
+                                            <div class="check-small-element">
+                                                <input type="checkbox" class="checkbox" id="checkbox-Folding">
+                                                <label for="check">Folding vs. Hanging</label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="modal-footer d-flex justify-content-between">
+                                <button type="button" class="btn"><ins>Clear all</ins></button>
+                                <button type="button" class="btn btn-dark">Show</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Product infomation -->
+        <div class="pb-5">
+            <div class="product-info fs-5">
+                <div class="product-info-container product-main">
+
+                    <% for( let i = 0; i < productList.length; i++ ) { %>
+                        <div>
+                            <div class="sub-product-info-container">
+                                <img class="product-img rounded-5" src="images/upload_vendor/<%= productList[i].image_url %>" alt="test1">
+                                <i class="fa-regular fa-heart position-absolute"></i>
+                                <button type="button" class="view-detail-btn position-absolute px-2 py-1">
+                                    <a class="text-decoration-none" href="/view-details/<%= productList[i].id %>" id="<%= productList[i].id %>">View Details</a></button>
+                            </div>
+        
+                            <div class="product-title mt-2">
+                                <p class="product-name fw-bold"><%= productList[i].name %></p>
+                                <p><i class="product-star fa-solid fa-star"></i><%= productList[i].stock %></p>
+                            </div>
+                            <p class="product-original my-0 fst-italic fw-light"><%= productList[i].material %></p>
+                            <p class="product-purpose my-0 fst-italic fw-light"><%= productList[i].season %></p>
+                            <p class="product-price fw-bold my-0">$<%= productList[i].price %>/m</p>
+                        </div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+
+<%- include('partials/global_footer.ejs') %>

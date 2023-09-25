@@ -1,0 +1,97 @@
+<%- include('partials/global_header.ejs') %>
+
+        <section class="container-signup forms">
+            <!-- Sign Up -->
+            <div class="form signup">
+                <div class="form-content">
+                    <header class="login-header">Sign Up</header>
+
+                    <form action="/submit" method="POST">
+                        <div class="field drop-down">
+                            <select class="field form-select" id="role-dropdown" name="role">
+                                <option value="role" disabled selected>Select your role</option>
+                                <option value="customer" name="Customer">Customer</option>
+                                <option value="vendor" name="Vendor">Vendor</option>
+                                <option value="shipper" name="Shipper">Shipper</option>
+                            </select>
+                        </div>
+                        <div class="field input-field">
+                            <input type="text" class="form-control m-0" placeholder="Username" id="username" class="username" name="username">
+
+                        </div>
+                        <div class="field input-field">
+                            <input type="email" class="form-control m-0" placeholder="Email"  class="email" name="email">
+                        </div>
+
+                        <div class="field input-field">
+                            <input type="password" class="form-control m-0 password" placeholder="Password" id="password" name="password" >
+                            <i class='bx bx-hide hide-icon'></i>
+
+                        </div>
+                        <!-- Customer -->
+                        <section id="customer">
+                            <div class="field input-field">
+                                <input type="text" class="form-control m-0" name="address" placeholder="Address">
+                            </div>
+
+                            <div class="field drop-down">
+                                <select class="field form-select" name="city">
+                                    <option value="Select your city" disabled selected>Select your city</option>
+                                    <option value="Hanoi">Hanoi</option>
+                                    <option value="Danang">Da Nang</option>
+                                    <option value="Ho Chi Minh">Ho Chi Minh</option>
+                                </select>
+                            </div>
+                            <div class="field drop-down">
+                                <select class="field form-select" id="paymentMethod" name="payment">
+                                    <option value="Payment" disabled selected>Payment Method</option>
+                                    <option value="Credit/Debit Card">Credit/Debit Card</option>
+                                    <option value="Paypal" name="paypal">Paypal</option>
+                                    <option value="ZaloPay" name="zalopay">ZaloPay</option>
+                                    <option value="VNPay" name="vnpay">VNPay</option>
+                                </select>
+                            </div>
+                        </section>
+                        <!-- Vendor -->
+                        <section id="vendor">
+                            <div class="field input-field">
+                                <input type="text" class="form-control m-0" name="business" placeholder="Business name">
+                            </div>
+
+                            <div class="field input-field">
+                                <input type="text" class="form-control m-0" name="vendor_address" placeholder="Address">
+                            </div>
+
+                            <div class="field drop-down">
+                                <select class="field form-select" name="vendor_city">
+                                    <option value="Select your city" disabled selected>Select your city</option>
+                                    <option value="Hanoi">Hanoi</option>
+                                    <option value="Danang">Da Nang</option>
+                                    <option value="Ho Chi Minh">Ho Chi Minh</option>
+                                </select>
+                            </div>
+
+                        </section>
+                        <!-- Shipper -->
+                        <section id="shipper">
+                            <div class="field drop-down">
+                                <select class="field form-select" name="ship_city">
+                                    <option value="Select your city" disabled selected>Select your distribution hub
+                                    </option>
+                                    <option value="Hanoi">Hanoi</option>
+                                    <option value="Danang">Da Nang</option>
+                                    <option value="Ho Chi Minh">Ho Chi Minh</option>
+                                </select>
+                            </div>
+                        </section>
+                        <div class="field button">
+                            <button id="signup_button" type="submit">Sign Up</button>
+                        </div>
+                        <div class="form-link">
+                            <span>Already have an account?<a href="/login" class="link login-link"> Login</a></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    <%- include('partials/global_footer.ejs') %>
